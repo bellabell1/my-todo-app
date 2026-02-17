@@ -54,7 +54,8 @@ todo-app/
 
 ## 📦 Installation
 
-1. clone the repository  
+1. git clone https://github.com/bellabell1/my-todo-app.git
+
 2. Open `index.html` in your browser  
 
 No additional setup required 🎉

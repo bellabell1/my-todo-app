@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="stats-container">
+            <div class="details">
+                <button id="themeToggle">🌙</button>
+                <h1>Todo App</h1>
+                <p id="motivationText">Keep it up!</p>
+                <div id="progressbar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="stats-numbers">
+                <p id="numbers">0</p>
+            </div>
+        </div>
+
+        <form id="todoForm">
+            <input type="text" placeholder="Add a task" id="taskInput">
+            <button type="submit">+</button>
+        </form>
+        <div id="taskControls">
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="active">Active</button>
+    <button class="filter-btn" data-filter="completed">Completed</button>
+    <button id="clearCompletedBtn">Clear Completed</button>
+</div>
+
+
+        <ul class="task-list" id="taskList"></ul>
+    </div>
+
+    
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

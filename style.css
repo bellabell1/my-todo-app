@@ -1,0 +1,281 @@
+/* =====================================================
+   GENERAL STYLING
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0e6f7;
+    color: #131312;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* =====================================================
+   STATS CONTAINER
+===================================================== */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid purple;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.details h1 {
+    margin-bottom: 5px;
+}
+
+.details p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+#progressbar {
+    width: 100%;
+    height: 10px;
+    background-color: #f8bdef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: #eb49d0;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* =====================================================
+   STATS NUMBERS
+===================================================== */
+.stats-numbers p {
+    width: 60px;
+    height: 60px;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* =====================================================
+   FORM & INPUT
+===================================================== */
+#todoForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid purple;
+    outline: none;
+    font-size: 16px;
+}
+
+#todoForm button {
+    width: 50px;
+    border-radius: 50%;
+    background-color: purple;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* =====================================================
+   TASK LIST
+===================================================== */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8bdef50;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.task-list li span.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-list li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: red;
+}
+
+.edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: green;
+}
+
+
+/* =====================================================
+   EDIT INPUT
+===================================================== */
+.edit-input {
+    flex: 1;
+    min-width: 50px; /* ensures input doesn’t shrink too much */
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid purple;
+    outline: none;
+}
+
+
+/* =====================================================
+   THEME TOGGLE BUTTON
+===================================================== */
+#themeToggle {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* =====================================================
+   CELEBRATION POPUP
+===================================================== */
+.celebration-popup {
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffecb3;
+    padding: 12px 20px;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    animation: slideDown 0.3s ease;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 480px) {
+    .stats-container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .stats-numbers p {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    #todoForm {
+        flex-direction: column;
+    }
+
+    #todoForm button {
+        width: 100%;
+    }
+}
+
+#taskControls button {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid purple;
+    background-color: white;
+    color: purple;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#taskControls button:hover {
+    background-color: purple;
+    color: white;
+}
+
+#taskControls button.active {
+    background-color: purple;
+    color: white;
+}
+
+#taskControls button {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid purple;
+    background-color: white;
+    color: purple;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#taskControls button:hover {
+    background-color: purple;
+    color: white;
+}
+
+#taskControls button.active {
+    background-color: purple;
+    color: white;
+}
+
+#taskControls{
+        display:flex; 
+    gap:10px;
+    margin-bottom:20px;
+}
+
+

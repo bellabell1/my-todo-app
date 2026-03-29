@@ -87,4 +87,4 @@ Works on:
 
 ## 👨‍💻 Author
 
-Built as a JavaScript practice project to improve **DOM manipulation**, **state management**, and **UI interactivity**.  
+  **Isabella Njunkom Kindo**  
